@@ -1,10 +1,10 @@
 <h1> X-SpringBoot </h1>
 
-![Image text](https://img.shields.io/badge/x--springboot-v2.1-green.svg)
-![Image text](https://img.shields.io/badge/springboot-2.1.3RELEASE-green.svg)
+![Image text](https://img.shields.io/badge/x--springboot-v2.1.1-green.svg)
+![Image text](https://img.shields.io/badge/springboot-2.1.3-green.svg)
 ![Image text](https://img.shields.io/badge/MyBatis%20Plus-3.1.0-green.svg)
 
-[更新日志](https://github.com/yzcheng90/X-SpringBoot/tree/master/doc/updateLog.md) | [项目地址](https://github.com/yzcheng90)
+[更新日志](https://github.com/yzcheng90/X-SpringBoot/tree/master/doc/updateLog.md) | [项目地址](https://github.com/yzcheng90)  | [SpringCloud版本](https://github.com/yzcheng90/ms)
 
 **项目说明** 
 - X-SpringBoot 是一个轻量级的Java快速开发平台，基于各大开源项目组合而来，用于快速构建中小型API、RESTful API项目，该项目已经有过多个真实项目的实践，稳定、简单、快速，使我们摆脱那些重复劳动。
@@ -58,8 +58,8 @@ X-SpringBoot
 ├─modules 功能模块
 │  ├─app API接口模块(APP调用)
 │  ├─oss 文件服务模块
-│  └─sys 权限模块
-│  └─apkversion APK 版本管理
+│  ├─sys 权限模块
+│  ├─apkversion APK 版本管理
 │  └─gen 代码生成
 │ 
 ├─Application 项目启动类
@@ -73,7 +73,7 @@ X-SpringBoot
 **部署** 
 - 后台部署
  ```
-   1、 $git clong https://github.com/yzcheng90/X-SpringBoot.git
+   1、 $git clone https://github.com/yzcheng90/X-SpringBoot.git
    
    2 、IDEA 打开项目引入依赖
    
@@ -102,6 +102,8 @@ X-SpringBoot
         }
         ...
         
+        ( 这里建议直接复制项目中的doc/nginx.conf替换你的nginx配置文件，然后修改静态页面目录 )
+        
      3、启动nginx 访问 localhost
  ```
 
@@ -128,12 +130,19 @@ X-SpringBoot
 2) 如果改完了还是不行，看看你mysql版本8.0以上 须要修改pom.xml中的 mysql-connector-java 的版本
 
 ```
+4、启动了nginx 还是不能访问前台
+```
+1) 确认一下nginx.conf 配置有没有问题
+
+2）把所有的nginx的进程都结束再启动试试 （一般有很多个nginx的进程，结束一个再重新启动也是没用的）
+
+```
 
 
  **最后**
 
 - 交流QQ群：17470566
 - 本人QQ：913624256
-- 如果喜欢，记得star fork 谢谢您的关注 x_springboot会持续维护
+- 如果喜欢，记得star fork 谢谢您的关注 x-springboot会持续维护
 
 
